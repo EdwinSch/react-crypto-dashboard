@@ -1,0 +1,44 @@
+// Init
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+}
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+.img {
+  width: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+// Solids
+$font: "Inter", sans-serif;
+$positive: #1eb589;
+$negative: #dc414c;
+$bitcoin: #f69119;
+$ether: #5d79e8;
+$tether: #1c8f68;
+$doge: #cfb53f;
+
+// Light Mode
+$bgPrimary: #ffffff;
+$bgSecondary: #f7f9ff;
+$bgCards: #f1f3fa;
+$textPrimary: #1d1f29;
+$textSecondary: #63687d;
+
+// Light Mode
+
+// Main Styles
+body {
+  font-family: $font;
+  background: $bgPrimary;
+}
