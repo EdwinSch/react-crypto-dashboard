@@ -27,6 +27,7 @@ $bitcoin: #f69119;
 $ether: #5d79e8;
 $tether: #1c8f68;
 $doge: #cfb53f;
+$inspect: solid red 1px;
 
 // Light Mode
 $bgPrimary: #ffffff;
@@ -37,8 +38,42 @@ $textSecondary: #63687d;
 
 // Light Mode
 
-// Main Styles
+// ---Global Styles
 body {
   font-family: $font;
   background: $bgPrimary;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+}
+
+main {
+  border: $inspect;
+  width: 1110px;
+}
+
+// ---Header Styles
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  h1 {
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: $textPrimary;
+    text-transform: capitalize;
+  }
+  h2 {
+    font-size: 0.875rem;
+    font-weight: 700;
+    color: $textSecondary;
+    text-transform: capitalize;
+  }
+  label {
+    font-size: 0.875rem;
+    font-weight: 700;
+    color: $textSecondary;
+    text-transform: capitalize;
+  }
 }
