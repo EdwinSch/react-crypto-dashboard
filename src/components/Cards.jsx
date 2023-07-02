@@ -1,31 +1,38 @@
-import BTC from "../assets/btc.png";
-import ETH from "../assets/ether.png";
-import USDT from "../assets/tether.png";
-import DOGE from "../assets/doge.png";
+import BTC from "../assets/BTC.png";
+import ETH from "../assets/ETH.png";
+import USDT from "../assets/USDT.png";
+import DOGE from "../assets/DOGE.png";
 
 import { VscTriangleUp, VscTriangleDown } from "react-icons/vsc";
+import { useState } from "react";
 
 const Cards = ({ exchange }) => {
+  // State for dynamic percentage
+  const [priceChange, setPriceChange] = useState(true);
+
   return (
     <section className="main-cards-container">
       {exchange.map((coin) => {
         // Destructure
-        const { id, symbol, name, priceUsd } = coin;
-        // Convert incoming string to float number
-        let conversion = parseFloat(priceUsd).toFixed(2);
+        const { id, symbol, name, priceUsd, changePercent24Hr } = coin;
+
+        // Convert incoming PRICE string to float number
+        let priceConversion = parseFloat(priceUsd).toFixed(2);
+        // Convert incoming PERCENTAGE string to float number
+        let percentConversion = parseFloat(changePercent24Hr).toFixed(2);
 
         return (
           <article className="main-card" key={id}>
             <div className="card-header">
-              <img src={BTC} alt={name} />
+              <img src={eval(symbol)} alt={name} />
               <h3>{name}</h3>
             </div>
-            <p className="value">${conversion}</p>
-            <p className="percentage">
+            <p className="value">${priceConversion}</p>
+            <p className="percentage" style={{ color: "green" }}>
               <span>
-                <VscTriangleUp />
+                {priceChange ? <VscTriangleUp /> : <VscTriangleDown />}
               </span>
-              12% Today
+              {percentConversion}% (24Hr)
             </p>
           </article>
         );

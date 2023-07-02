@@ -102,7 +102,6 @@ header {
     background: $bgCards;
     border-radius: 5px;
     padding: 35px;
-    border-top: solid 4px blue;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -131,7 +130,7 @@ header {
 
     .percentage {
       text-align: center;
-      color: $positive;
+      // color: $positive;
       font-size: 0.875rem;
       font-weight: 700;
 
@@ -139,5 +138,18 @@ header {
         margin-right: 4px;
       }
     }
+  }
+
+  .main-card:nth-child(1) {
+    border-top: solid 4px $bitcoin;
+  }
+  .main-card:nth-child(2) {
+    border-top: solid 4px $ether;
+  }
+  .main-card:nth-child(3) {
+    border-top: solid 4px $tether;
+  }
+  .main-card:nth-child(4) {
+    border-top: solid 4px $doge;
   }
 }
