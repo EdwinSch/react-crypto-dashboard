@@ -58,7 +58,7 @@ body {
   z-index: -1;
 }
 main {
-  border: $inspect;
+  // border: $inspect;
   margin-top: 36px;
   width: 1110px;
 }
@@ -68,6 +68,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  line-height: 28px;
 
   h1 {
     font-size: 1.75rem;
@@ -86,5 +87,50 @@ header {
     font-weight: 700;
     color: $textSecondary;
     text-transform: capitalize;
+  }
+}
+
+// ---Main Card Styles
+.main-cards-container {
+  margin-top: 46px;
+  display: flex;
+  gap: 30px;
+
+  .main-card {
+    width: 255px;
+    height: 216px;
+    background: $bgCards;
+    border-radius: 5px;
+    padding: 35px;
+    border-top: solid 4px blue;
+
+    .card-header {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+
+      img {
+        width: 25px;
+      }
+      h3 {
+        font-size: 0.75rem;
+        color: $textSecondary;
+      }
+    }
+
+    .value {
+      text-align: center;
+      color: $textPrimary;
+      font-size: 1.875rem;
+      font-weight: 700;
+    }
+
+    .percentage {
+      text-align: center;
+      color: $positive;
+      font-size: 0.875rem;
+      font-weight: 700;
+    }
   }
 }
