@@ -3,6 +3,8 @@ import ETH from "../assets/ether.png";
 import USDT from "../assets/tether.png";
 import DOGE from "../assets/doge.png";
 
+import { VscTriangleUp, VscTriangleDown } from "react-icons/vsc";
+
 const Cards = ({ exchange }) => {
   return (
     <section className="main-cards-container">
@@ -19,7 +21,12 @@ const Cards = ({ exchange }) => {
               <h3>{name}</h3>
             </div>
             <p className="value">${conversion}</p>
-            <p className="percentage">12% Today</p>
+            <p className="percentage">
+              <span>
+                <VscTriangleUp />
+              </span>
+              12% Today
+            </p>
           </article>
         );
       })}

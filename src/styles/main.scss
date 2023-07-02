@@ -103,6 +103,9 @@ header {
     border-radius: 5px;
     padding: 35px;
     border-top: solid 4px blue;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 
     .card-header {
       display: flex;
@@ -114,7 +117,7 @@ header {
         width: 25px;
       }
       h3 {
-        font-size: 0.75rem;
+        font-size: 1rem;
         color: $textSecondary;
       }
     }
@@ -131,6 +134,10 @@ header {
       color: $positive;
       font-size: 0.875rem;
       font-weight: 700;
+
+      span {
+        margin-right: 4px;
+      }
     }
   }
 }
