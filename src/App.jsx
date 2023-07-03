@@ -2,6 +2,7 @@ import Header from "./components/Header";
 import Cards from "./components/Cards";
 
 import { useState, useEffect } from "react";
+import SubCards from "./components/SubCards";
 
 const url =
   "https://api.coincap.io/v2/assets/?ids=bitcoin,ethereum,tether,dogecoin";
@@ -33,6 +34,7 @@ function App() {
       <main>
         <Header />
         <Cards exchange={exchange} />
+        <SubCards exchange={exchange} />
       </main>
     </>
   );
