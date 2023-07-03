@@ -59,8 +59,10 @@ body {
 }
 main {
   // border: $inspect;
+  padding: 0 20px;
   margin-top: 36px;
-  width: 1110px;
+  width: 100vw;
+  max-width: 1160px;
 }
 
 // ---Header Styles
@@ -92,12 +94,14 @@ header {
 
 // ---Main Card Styles
 .main-cards-container {
+  // border: $inspect;
   margin-top: 46px;
-  display: flex;
+  display: grid;
   gap: 30px;
+  grid-template-columns: repeat(auto-fit, minmax(255px, 1fr));
 
   .main-card {
-    width: 255px;
+    // width: 255px;
     height: 216px;
     background: $bgCards;
     border-radius: 5px;
@@ -121,16 +125,22 @@ header {
       }
     }
 
+    .symbol {
+      margin-top: -20px;
+      font-size: 0.75rem;
+      text-align: center;
+      color: $textSecondary;
+      font-weight: 400;
+    }
+    .percentage {
+      text-align: center;
+      font-size: 0.875rem;
+      font-weight: 700;
+    }
     .value {
       text-align: center;
       color: $textPrimary;
       font-size: 1.875rem;
-      font-weight: 700;
-    }
-
-    .percentage {
-      text-align: center;
-      font-size: 0.875rem;
       font-weight: 700;
 
       span {

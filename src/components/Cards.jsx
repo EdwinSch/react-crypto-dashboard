@@ -7,7 +7,7 @@ import { VscTriangleUp, VscTriangleDown } from "react-icons/vsc";
 
 const Cards = ({ exchange }) => {
   // Set global variables
-  let stringColor;
+  let setColor;
   let setSymbol;
 
   return (
@@ -23,10 +23,10 @@ const Cards = ({ exchange }) => {
 
         // Check price change && set symbol/color
         if (percentConversion < 0) {
-          stringColor = "#dc414c";
+          setColor = "#dc414c";
           setSymbol = <VscTriangleDown />;
         } else {
-          stringColor = "#1eb589";
+          setColor = "#1eb589";
           setSymbol = <VscTriangleUp />;
         }
 
@@ -36,10 +36,11 @@ const Cards = ({ exchange }) => {
               <img src={eval(symbol)} alt={name} />
               <h3>{name}</h3>
             </div>
+            <p className="symbol">{symbol}</p>
             <p className="value">${priceConversion}</p>
-            <p className="percentage" style={{ color: stringColor }}>
+            <p className="percentage" style={{ color: setColor }}>
               <span>{setSymbol}</span>
-              {percentConversion}% (24Hr)
+              {`${percentConversion}% (24Hr)`}
             </p>
           </article>
         );
