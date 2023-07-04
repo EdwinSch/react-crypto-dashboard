@@ -1,9 +1,5 @@
-## Header
+## Crypto Dashboard (React)
 
-Text
+This dashboard shows active crypto currency prices. Data is fetched from a external API. Showcasing: API handling, data/state handling and dynmamic styling. Made in Vite + CSS.
 
-### Sub-Header
-
-Text
-
-🚀 [Some link here](https://)
+↔️ [API](https://coincap.io/)
