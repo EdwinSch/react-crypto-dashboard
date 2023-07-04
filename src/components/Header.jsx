@@ -1,4 +1,5 @@
 import GetDate from "./GetDate";
+import Toggle from "./Toggle";
 
 const Header = () => {
   return (
@@ -7,9 +8,7 @@ const Header = () => {
         <h1>crypto dashboard</h1>
         <GetDate />
       </div>
-      <div className="color-switch">
-        <label htmlFor="">dark mode</label>
-      </div>
+      <Toggle />
     </header>
   );
 };
