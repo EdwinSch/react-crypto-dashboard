@@ -57,12 +57,28 @@ body {
   left: 0;
   z-index: -1;
 }
+
 main {
   // border: $inspect;
   padding: 0 20px;
   margin-top: 36px;
   width: 100vw;
   max-width: 1160px;
+}
+
+@keyframes spinner {
+  to {
+    transform: rotate(360deg);
+  }
+}
+.loading {
+  width: 6rem;
+  height: 6rem;
+  border: 5px solid $textSecondary;
+  border-radius: 50%;
+  margin: 0 auto;
+  border-top-color: $bitcoin;
+  animation: spinner 500ms linear infinite;
 }
 
 // ---Header Styles

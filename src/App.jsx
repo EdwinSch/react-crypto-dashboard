@@ -1,3 +1,4 @@
+import Loader from "./components/Loader";
 import Header from "./components/Header";
 import Cards from "./components/Cards";
 
@@ -9,10 +10,12 @@ const url =
 
 function App() {
   // States
+  const [isLoading, setIsLoading] = useState(true);
   const [exchange, setExchange] = useState([]);
 
   // Fetch from API
   const fetchData = async () => {
+    setIsLoading(true);
     try {
       const response = await fetch(url);
       const cryptoData = await response.json();
@@ -21,6 +24,8 @@ function App() {
     } catch (error) {
       console.log(error);
     }
+
+    setIsLoading(false);
   };
 
   // UseEffect Fetch
@@ -28,6 +33,19 @@ function App() {
     fetchData();
   }, []);
 
+  // While loading/fetching
+  if (isLoading) {
+    return (
+      <>
+        <div className="bg-top" aria-hidden="true"></div>
+        <main>
+          <Loader />
+        </main>
+      </>
+    );
+  }
+
+  // When ready show dashboard
   return (
     <>
       <div className="bg-top" aria-hidden="true"></div>
