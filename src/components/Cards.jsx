@@ -37,7 +37,7 @@ const Cards = ({ exchange }) => {
               <h3>{name}</h3>
             </div>
             <p className="symbol">{symbol}</p>
-            <p className="value">${priceConversion}</p>
+            <p className="value">{`$${priceConversion}`}</p>
             <p className="percentage" style={{ color: setColor }}>
               <span>{setSymbol}</span>
               {`${percentConversion}% (24Hr)`}

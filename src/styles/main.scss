@@ -162,3 +162,52 @@ header {
     border-top: solid 4px $doge;
   }
 }
+
+// ---Sub Card Styles
+.sub-cards-container {
+  margin-top: 46px;
+
+  h4 {
+    font-size: 1.5rem;
+    color: $textSecondary;
+    font-weight: 700;
+    text-transform: capitalize;
+  }
+  .sub-cards-grid {
+    margin-top: 24px;
+    display: grid;
+    gap: 30px;
+    grid-template-columns: repeat(auto-fit, minmax(255px, 1fr));
+
+    .sub-card {
+      // width: 255px;
+      height: 125px;
+      background: $bgCards;
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+      .card-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        p {
+          color: $textSecondary;
+          font-size: 0.875rem;
+          font-weight: 700;
+        }
+        img {
+          width: 25px;
+        }
+      }
+
+      .value {
+        color: $textPrimary;
+        font-size: 1.625rem;
+        font-weight: 700;
+      }
+    }
+  }
+}

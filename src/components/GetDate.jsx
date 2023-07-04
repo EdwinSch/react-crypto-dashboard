@@ -1,5 +1,3 @@
-import { useState, useEffect } from "react";
-
 const GetDate = () => {
   const getDate = new Date();
 
