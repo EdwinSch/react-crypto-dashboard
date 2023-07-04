@@ -136,16 +136,15 @@ header {
       text-align: center;
       font-size: 0.875rem;
       font-weight: 700;
+      span {
+        margin-right: 4px;
+      }
     }
     .value {
       text-align: center;
       color: $textPrimary;
       font-size: 1.875rem;
       font-weight: 700;
-
-      span {
-        margin-right: 4px;
-      }
     }
   }
 
