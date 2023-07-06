@@ -33,7 +33,7 @@ const Cards = ({ exchange }) => {
         return (
           <article className="main-card" key={id}>
             <div className="card-header">
-              <img src={eval(symbol)} alt={name} />
+              {/* <img src={eval(symbol)} alt={name} /> */}
               <h3>{name}</h3>
             </div>
             <p className="symbol">{symbol}</p>

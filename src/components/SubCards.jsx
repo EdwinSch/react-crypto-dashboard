@@ -23,7 +23,7 @@ const SubCards = ({ exchange }) => {
             <article key={id} className="sub-card">
               <div className="card-header">
                 <p>{name}</p>
-                <img src={eval(symbol)} alt={name} />
+                {/* <img src={eval(symbol)} alt={name} /> */}
               </div>
               <p className="value">{`$${capConversion}b`}</p>
             </article>
