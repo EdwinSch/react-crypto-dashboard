@@ -11,8 +11,6 @@ const Cards = ({ exchange }) => {
         // Destructure
         const { id, symbol, name, priceUsd, changePercent24Hr } = coin;
 
-        console.log(symbol.toLowerCase());
-
         // Convert incoming PRICE string to float number
         let priceConversion = parseFloat(priceUsd).toFixed(2);
         // Convert incoming PERCENTAGE string to float number
