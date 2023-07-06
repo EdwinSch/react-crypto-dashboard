@@ -1,8 +1,3 @@
-import BTC from "../assets/BTC.png";
-import ETH from "../assets/ETH.png";
-import USDT from "../assets/USDT.png";
-import DOGE from "../assets/DOGE.png";
-
 import { VscTriangleUp, VscTriangleDown } from "react-icons/vsc";
 
 const Cards = ({ exchange }) => {
@@ -15,6 +10,8 @@ const Cards = ({ exchange }) => {
       {exchange.map((coin) => {
         // Destructure
         const { id, symbol, name, priceUsd, changePercent24Hr } = coin;
+
+        console.log(symbol.toLowerCase());
 
         // Convert incoming PRICE string to float number
         let priceConversion = parseFloat(priceUsd).toFixed(2);
@@ -33,7 +30,10 @@ const Cards = ({ exchange }) => {
         return (
           <article className="main-card" key={id}>
             <div className="card-header">
-              {/* <img src={eval(symbol)} alt={name} /> */}
+              <img
+                src={`https://assets.coincap.io/assets/icons/${symbol.toLowerCase()}@2x.png`}
+                alt={name}
+              />
               <h3>{name}</h3>
             </div>
             <p className="symbol">{symbol}</p>

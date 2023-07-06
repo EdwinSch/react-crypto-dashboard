@@ -1,8 +1,3 @@
-import BTC from "../assets/BTC.png";
-import ETH from "../assets/ETH.png";
-import USDT from "../assets/USDT.png";
-import DOGE from "../assets/DOGE.png";
-
 const SubCards = ({ exchange }) => {
   return (
     <section className="sub-cards-container">
@@ -23,7 +18,10 @@ const SubCards = ({ exchange }) => {
             <article key={id} className="sub-card">
               <div className="card-header">
                 <p>{name}</p>
-                {/* <img src={eval(symbol)} alt={name} /> */}
+                <img
+                  src={`https://assets.coincap.io/assets/icons/${symbol.toLowerCase()}@2x.png`}
+                  alt={name}
+                />
               </div>
               <p className="value">{`$${capConversion}b`}</p>
             </article>
