@@ -4,11 +4,13 @@ This dashboard shows active crypto currency values. Data is fetched from a exter
 
 _**Note**: This project utilizes the brand new native CSS nesting functionalities! As of now supported by all major browsers. If the styling seems to break, please update your browser._
 
+### Live Demo
+
 🚀 [Deployed App](https://super-frangollo-a76201.netlify.app/)
 
 ↔️ [API](https://coincap.io/)
 
-### 🛠️ Build with
+#### 🛠️ Build with
 
 - React
 - CSS
