@@ -1,14 +1,14 @@
 import GetDate from "./GetDate";
 import Toggle from "./Toggle";
 
-const Header = () => {
+const Header = ({ toggleTheme, theme }) => {
   return (
     <header>
       <div className="header-titles">
         <h1>crypto dashboard</h1>
         <GetDate />
       </div>
-      <Toggle />
+      <Toggle toggleTheme={toggleTheme} theme={theme} />
     </header>
   );
 };

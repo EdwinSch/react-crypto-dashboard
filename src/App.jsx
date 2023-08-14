@@ -29,6 +29,15 @@ function App() {
     setIsLoading(false);
   };
 
+  // Switch theme function
+  const toggleTheme = () => {
+    if (theme === "light-theme") {
+      setTheme("dark-theme");
+      return;
+    }
+    setTheme("light-theme");
+  };
+
   // Invoke Fetch
   useEffect(() => {
     fetchData();
@@ -56,7 +65,7 @@ function App() {
     <>
       <div className="bg-top" aria-hidden="true"></div>
       <main>
-        <Header />
+        <Header toggleTheme={toggleTheme} theme={theme} />
         <Cards exchange={exchange} />
         <SubCards exchange={exchange} />
       </main>

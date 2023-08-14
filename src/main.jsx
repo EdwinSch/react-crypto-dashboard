@@ -2,11 +2,8 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import App from "./App.jsx";
 
-// import "./styles/main.scss";
-// import "./styles/toggle.scss";
-
-import "./global-styles.css";
-import "./toggle-styles.css";
+import "./styles/global-styles.css";
+import "./styles/toggle-styles.css";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>

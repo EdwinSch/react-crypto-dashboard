@@ -31,13 +31,22 @@ ul {
   --inspect: solid red 1px;
 }
 
-/* Lightmode */
+/* LIGHT MODE */
 .light-theme {
   --bgPrimary: #ffffff;
   --bgSecondary: #f7f9ff;
   --bgCards: #f1f3fa;
   --textPrimary: #1d1f29;
   --textSecondary: #63687d;
+}
+
+/* DARK mode */
+.dark-theme {
+  --bgPrimary: #1d1f29;
+  --bgSecondary: #20222f;
+  --bgCards: #252b42;
+  --textPrimary: #ffffff;
+  --textSecondary: #8c98c6;
 }
 
 /*---- Global Styles */
