@@ -12,6 +12,7 @@ function App() {
   // States
   const [isLoading, setIsLoading] = useState(true);
   const [exchange, setExchange] = useState([]);
+  const [theme, setTheme] = useState("light-theme");
 
   // Fetch from API
   const fetchData = async () => {
@@ -28,10 +29,15 @@ function App() {
     setIsLoading(false);
   };
 
-  // UseEffect Fetch
+  // Invoke Fetch
   useEffect(() => {
     fetchData();
   }, []);
+
+  // Load initial color theme
+  useEffect(() => {
+    document.documentElement.className = theme;
+  }, [theme]);
 
   // While loading/fetching
   if (isLoading) {
