@@ -42,11 +42,7 @@
 
 .toggle-checkbox:checked + .toggle-switch:before {
   left: 22px;
-  background: linear-gradient(
-    to bottom,
-    hsl(232, 19%, 15%),
-    hsl(230, 17%, 14%)
-  );
+  background: linear-gradient(to bottom, black, rgb(82, 82, 82));
 }
 
 .toggle-checkbox {
